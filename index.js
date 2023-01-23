@@ -2,8 +2,8 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const connet = require("./Config/Mongoose.config");
-const userRoute = require("./Routes/user.route");
-const bugRoute = require("./Routes/bug.route");
+const userRoute = require("./Routes/user.rote");
+// const bugRoute = require("./Routes/bug.route");
 const port = process.env.PORT;
 const app = express();
 app.use(cors());
@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
   res.send("Server Running fine");
 });
 app.use("/user", userRoute);
-app.use("/bugs", bugRoute);
+// app.use("/bugs", bugRoute);
 
 app.listen(port, () => {
   connet()
