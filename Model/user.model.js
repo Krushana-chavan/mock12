@@ -3,11 +3,8 @@ const userSchema = new mongoose.Schema(
   {
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
-  },
-  {
-    versionKey: false,
-    timestamps: true,
   }
+  
 );
-const User = mongoose.model("user", userSchema);
+const User = mongoose.model("new", userSchema);
 module.exports = User;
